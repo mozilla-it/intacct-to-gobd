@@ -3,18 +3,32 @@
 A script (convert_intacct_to_gobd.py) to convert a provided CSV file (converted from Intacct's Excel export) to a format acceptable to Germany's GoBD rules. I think?
 
 ## Examples
+Output to a directory:
 ```
 $ ./convert_intacct_to_gobd.py -f general_ledger_2014.csv
 [2018-07-30 16:16:46.754634] Starting...
 [2018-07-30 16:16:46.754815] Output dir: general_ledger_2014_GoBD_output
 [2018-07-30 16:16:46.834647] Finished.
+
+$ ls -al general_ledger_2014_GoBD_output/
+total 3360
+drwxr-xr-x   6 cvalaas  staff      192 Jul 30 16:34 .
+drwxr-xr-x  11 cvalaas  staff      352 Jul 30 16:34 ..
+-rw-r--r--   1 cvalaas  staff     3043 Jul 30 16:34 INDEX.XML
+-rw-r--r--   1 cvalaas  staff    17203 Jul 30 16:34 accounts.csv
+-rwxr-xr-x@  1 cvalaas  staff     6668 Jul 30 16:34 gdpdu-01-08-2002.dtd
+-rw-r--r--   1 cvalaas  staff  1685566 Jul 30 16:34 general_ledger.csv
 ```
+
+Zip the resulting directory after creating:
 ```
 $ ./convert_intacct_to_gobd.py -f general_ledger_2014.csv -z
 [2018-07-30 16:26:30.734215] Starting...
 [2018-07-30 16:26:30.734384] Output dir: general_ledger_2014_GoBD_output
 [2018-07-30 16:26:30.734409] Output dir already exists! Exiting for safety!
 ```
+
+Oops, the output dir already exists, so overwrite it:
 ```
 $ ./convert_intacct_to_gobd.py -f general_ledger_2014.csv -z -O
 [2018-07-30 16:26:35.802121] Starting...
