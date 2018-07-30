@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DataSet SYSTEM "gdpdu-01-08-2002.dtd">
+<DataSet>
+	<Version>1.0</Version>
+	<DataSupplier>
+		<Name>MZ Denmark GMBH</Name>
+		<Location>Mountain View/CA/United States</Location>
+		<Comment></Comment>
+	</DataSupplier>
+	<Media>
+		<Name>CD Nummer 1</Name>
+		<Table>
+			<URL>accounts.csv</URL>
+			<Name>Accounts</Name>
+			<Description>Account Names and Balance Forwards</Description>
+			<Validity>
+				<Range>
+					<From>START_DATE</From>
+					<To>END_DATE</To>
+				</Range>
+				<Format>MM/DD/YYYY</Format>
+			</Validity>
+			<DecimalSymbol>.</DecimalSymbol>
+			<DigitGroupingSymbol>,</DigitGroupingSymbol>
+			<VariableLength>
+				<VariableColumn>
+					<Name>Account Num</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Description</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Balance Forward</Name>
+					<Numeric/>
+				</VariableColumn>
+			</VariableLength>
+		</Table>
+		<Table>
+			<URL>general_ledger.csv</URL>
+			<Name>General Ledger Report</Name>
+			<Description>General Ledger Report</Description>
+			<Validity>
+				<Range>
+					<From>START_DATE</From>
+					<To>END_DATE</To>
+				</Range>
+				<Format>MM/DD/YYYY</Format>
+			</Validity>
+			<DecimalSymbol>.</DecimalSymbol>
+			<DigitGroupingSymbol>,</DigitGroupingSymbol>
+			<VariableLength>
+				<VariableColumn>
+					<Name>Account Num</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Posted Dt.</Name>
+          <Date>
+            <Format>MM/DD/YY</Format>
+					</Date>				
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Doc Dt.</Name>
+          <Date>
+            <Format>MM/DD/YY</Format>
+					</Date>				
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Doc</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Description</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Department</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Location</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Product Line</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Program</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Vendor Name</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>JNL</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Curr</Name>
+					<AlphaNumeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Txn Amt</Name>
+					<Numeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Debit</Name>
+					<Numeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Credit</Name>
+					<Numeric/>
+				</VariableColumn>
+				<VariableColumn>
+					<Name>Balance</Name>
+					<Numeric/>
+				</VariableColumn>
+				<ForeignKey>
+					<Name>Account Num</Name>
+					<References>Account</References>
+				</ForeignKey>
+			</VariableLength>
+		</Table>
+	</Media>
+</DataSet>
