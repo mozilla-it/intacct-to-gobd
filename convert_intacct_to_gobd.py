@@ -100,7 +100,7 @@ def parse_csv_file(filename, accounts_fh, gl_fh):
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Convert Intacct .csv extract to German GoBD format")
-  parser.add_argument('-f', '--file', action='store', help='input filename')
+  parser.add_argument('-f', '--file', action='store', help='input filename', required=True)
   parser.add_argument('-O', '--overwrite', action='store_true', help='overwrite the output dir if it exists')
   parser.add_argument('-d', '--debug', action='store', help='debug level', type=int, default=3)
   parser.add_argument('-z', '--zip', action='store_true', help='zip the resulting dir')

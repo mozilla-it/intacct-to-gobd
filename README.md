@@ -2,6 +2,22 @@
 
 A script (convert_intacct_to_gobd.py) to convert a provided CSV file (converted from Intacct's Excel export) to a format acceptable to Germany's GoBD rules. I think?
 
+## Usage
+```
+$ ./convert_intacct_to_gobd.py --help
+usage: convert_intacct_to_gobd.py [-h] -f FILE [-O] [-d DEBUG] [-z]
+
+Convert Intacct .csv extract to German GoBD format
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  input filename
+  -O, --overwrite       overwrite the output dir if it exists
+  -d DEBUG, --debug DEBUG
+                        debug level
+  -z, --zip             zip the resulting dir
+```
+
 ## Examples
 Output to a directory:
 ```
