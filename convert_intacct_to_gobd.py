@@ -128,5 +128,6 @@ if __name__ == "__main__":
   if args.zip:
     print_debug(2, "Zipping up the result")
     call(['zip', '-r', out_dir + '.zip', out_dir])
+    print_debug(1, "Zipfile: %s" % out_dir + '.zip')
 
   print_debug(1, "Finished.")
