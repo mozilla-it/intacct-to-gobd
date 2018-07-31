@@ -2,6 +2,15 @@
 
 A script (`convert_intacct_to_gobd.py`) to convert a provided CSV file (converted from Intacct's Excel export) to a format acceptable to Germany's GoBD rules. I think?
 
+## Expected flow
+1. The German Government requests some info
+2. Finance exports Intacct data (perhaps a year's worth) as an Excel file
+3. Finance converts the Excel file to CSV (Comma Separated Values)
+3. The CSV file is sent to whomever is running this script
+4. This script is run resulting in a zipfile
+5. The zipfile is sent back to Finance
+6. Finance passes it on
+
 ## Usage
 ```
 $ ./convert_intacct_to_gobd.py --help
@@ -59,3 +68,6 @@ $ ./convert_intacct_to_gobd.py -f general_ledger_2014.csv -z -O
 [2018-07-30 16:26:35.931742] Zipfile: general_ledger_2014_GoBD_output.zip
 [2018-07-30 16:26:35.931899] Finished.
 ```
+
+## Supporting Docs
+Some sample docs provided by Audicon GmbH
