@@ -102,13 +102,13 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Convert Intacct .csv extract to German GoBD format")
   parser.add_argument('-f', '--file', action='store', help='input filename', required=True)
   parser.add_argument('-O', '--overwrite', action='store_true', help='overwrite the output dir if it exists')
-  parser.add_argument('-d', '--debug', action='store', help='debug level', type=int, default=3)
+  parser.add_argument('-d', '--debug', action='store', help='debug level', type=int, default=2)
   parser.add_argument('-z', '--zip', action='store_true', help='zip the resulting dir')
   args = parser.parse_args()
   
   debug = args.debug
 
-  print_debug(1, "Starting...")
+  print_debug(2, "Starting...")
 
   infile = args.file
   if not infile:
@@ -130,4 +130,4 @@ if __name__ == "__main__":
     call(['zip', '-r', out_dir + '.zip', out_dir])
     print_debug(1, "Zipfile: %s" % out_dir + '.zip')
 
-  print_debug(1, "Finished.")
+  print_debug(2, "Finished.")
